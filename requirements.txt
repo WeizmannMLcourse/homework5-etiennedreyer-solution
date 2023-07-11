@@ -1,0 +1,5 @@
+numpy
+torch
+tqdm
+pytest
+gymnasium[atari, accept-rom-license]

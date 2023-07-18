@@ -10,7 +10,7 @@ class PolicyNetwork(nn.Module):
 
         ### TODO: write correct input size
         self.layers = nn.Sequential(
-            nn.Linear(..., 512), nn.ReLU(),
+            nn.Linear(6000*2, 512), nn.ReLU(),
             nn.Linear(512, 2)
         )
     
@@ -32,9 +32,9 @@ class PolicyNetwork(nn.Module):
         action_log_prob = c.log_prob(action)
 
         ### TODO: fill the outputs
-        output = {'logits': ...,
-                  'action': ...,
-                  'action_log_prob': ... 
+        output = {'logits': logits,
+                  'action': action,
+                  'action_log_prob': action_log_prob 
                   }
 
         return output

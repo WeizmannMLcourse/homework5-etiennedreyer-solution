@@ -75,7 +75,7 @@ class GamesMemoryBank(Dataset):
 			### Take that and multiply by the discount factor.
 			### Finally, add it to the reward at this timestep.
 			### The answer is the new discounted reward (i.e. the one at one timestep back).
-			R = ...
+			R = r + self.gamma * R
 			
 			### "pre-pend" the discounted reward to the list of discounted rewards
 			self.discounted_rewards.insert(0, R)

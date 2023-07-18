@@ -18,7 +18,7 @@ class PolicyLoss(nn.Module):
         sel_action_log_prob = sel_action_log_prob.view(-1)
 
         ### TODO: negative log probability times discounted reward
-        policy_loss = ...
+        policy_loss = -sel_action_log_prob * discounted_rewards
         policy_loss = torch.mean(policy_loss)
         
         return policy_loss
